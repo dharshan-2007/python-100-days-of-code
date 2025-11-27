@@ -1,6 +1,8 @@
 #random walk
 import turtle as t
 import random
+from turtle import Screen
+sc=Screen()
 
 t.colormode(255)
 random_walk=t.Turtle()
@@ -34,3 +36,5 @@ for _ in range(random.randrange(100,250)):
     random_walk.color(random.choice(colors))
     random_walk.forward(30)
     random_walk.setheading(random.choice(directions))
+
+sc.exitonclick()
