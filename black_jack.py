@@ -1,9 +1,11 @@
 import random
 
+
 def pick_card():
     cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
     pck_crd = random.choice(cards)
     return pck_crd
+
 
 def calculate(lst):
     total = sum(lst)
@@ -12,8 +14,10 @@ def calculate(lst):
         total = sum(lst)
     return total
 
+
 def display(player, dck):
     print(f"{player}'s hand | score {calculate(dck)}")
+
 
 def play_blackjack():
     user_deck = [pick_card(), pick_card()]
@@ -33,9 +37,9 @@ def play_blackjack():
 
         if not gameover:
             n = input("Do you want to Hit or Stand (h or s): ").lower()
-            if n == 'h':
+            if n == "h":
                 user_deck.append(pick_card())
-            elif n == 's':
+            elif n == "s":
                 gameover = True
             else:
                 print("~~Invalid Choice~~")
@@ -53,11 +57,12 @@ def play_blackjack():
         print("You are busted. Dealer wins!")
     elif dealer_score > 21:
         print("Dealer busted. You win!")
-    elif(dealer_score==your_score):
+    elif dealer_score == your_score:
         print("Draw!")
-    elif(your_score>dealer_score):
+    elif your_score > dealer_score:
         print("you won!!!")
     else:
         print("Dealer won!")
+
 
 play_blackjack()

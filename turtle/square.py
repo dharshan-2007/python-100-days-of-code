@@ -1,9 +1,10 @@
 # Drawing Square
 
-from turtle import Turtle,Screen
-square=Turtle()
+from turtle import Turtle, Screen
+
+square = Turtle()
 square.shape("square")
-screen=Screen()
+screen = Screen()
 square.color("green")
 for i in range(4):
     square.forward(150)
